@@ -12,6 +12,9 @@ export default function Home() {
           <Link to="#tab1" smooth>Tab1</Link>
           <Link to="#tab2" smooth>Tab2</Link>
         </nav>
+        <section>
+          hii
+        </section>
         <Tab1 />
         <Tab2 />
       </BrowserRouter>
