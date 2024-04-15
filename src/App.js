@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+ import React from 'react'
+import Tab1 from './Tab1'
+import Tab2 from './Tab2'
+import Tab3 from './Tab3'
+import Tab4 from './Tab4'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import BrowserRouter, Routes, and Route
+import Navbar from './Navbar';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+
+ export default function App() {
+   return (
+      <>
+         
+        <Router>
+        <Navbar/>
+            <Routes>
+            <Route
+                        exact
+                        path="/tab1"
+                        element={<Tab1 />}
+                    />
+  
+                  <Route
+                  path="/tab2"
+                  element={<Tab2 />}
+                  />   
+                      <Route
+                  path="/tab3"
+                  element={<Tab3 />}
+                  />   
+                      <Route
+                  path="/tab4"
+                  element={<Tab4 />}
+                  />    
+            </Routes>
+
+        </Router>
+
+      </>
+   )
+ }
+ 
